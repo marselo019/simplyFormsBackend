@@ -4,8 +4,15 @@
 
 [dev]
   command = "node server.js"
+  targetPort = 3000
 
 [[redirects]]
   from = "/*"
-  to = "/server.js"
+  to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
