@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  functions = "."
+
+[dev]
+  command = "node server.js"
+
+[[redirects]]
+  from = "/*"
+  to = "/server.js"
+  status = 200
